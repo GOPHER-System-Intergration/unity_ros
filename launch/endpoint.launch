@@ -6,4 +6,7 @@
         <param name="tcp_ip" type="string" value="$(arg tcp_ip)"/>
         <param name="tcp_port" type="int" value="$(arg tcp_port)"/>
     </node>
+    <node name="unity_console_server" pkg="unity_ros" type="unity_console.py" output="screen">
+
+    </node>
 </launch>
