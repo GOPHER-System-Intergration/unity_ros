@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(ROS_TCP_Endpoint_msgs)
+project(ros_tcp_endpoint_msgs)
 
 find_package(catkin REQUIRED COMPONENTS
   rospy
@@ -9,9 +9,11 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 add_message_files(FILES
-    Image.msg
-    CompressedImage.msg
     ConsoleInfo.msg
+    ControllerInput.msg
+    HMDInput.msg
+    HandTracking.msg
+    CollisionDetector.msg
 )
 
 add_service_files(
