@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-# Basics ROS program to publish real-time streaming 
+# Basics ROS program to publish real-time streaming
 # video from your built-in webcam
 # Author:
 # - Addison Sears-Collins
 # - https://automaticaddison.com
- 
+
 # Import the necessary libraries
-import rospy # Python library for ROS
+import rospy  # Python library for ROS
 import numpy as np
 
-from ros_tcp_endpoint_msgs.msg import ConsoleInfo
-from ros_tcp_endpoint_msgs.srv import UnityPrint,UnityPrintResponse
+from ROS_TCP_Endpoint_msgs.msg import ConsoleInfo
+from ROS_TCP_Endpoint_msgs.srv import UnityPrint, UnityPrintResponse
 
 
 def handle_print(req):
@@ -21,6 +21,7 @@ def handle_print(req):
     pub.publish(msg)
     return UnityPrintResponse(0)
 
+
 def unity_console_server():
     rospy.init_node('unity_console_server')
     s = rospy.Service('unity_print', UnityPrint, handle_print)
@@ -29,8 +30,6 @@ def unity_console_server():
     print("Spining up console server")
     rospy.spin()
 
+
 if __name__ == "__main__":
     unity_console_server()
-
-    
- 
