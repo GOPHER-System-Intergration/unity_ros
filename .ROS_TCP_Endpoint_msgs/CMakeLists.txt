@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(ros_tcp_endpoint_msgs)
+project(ROS_TCP_Endpoint_msgs)
 
 find_package(catkin REQUIRED COMPONENTS
   rospy
